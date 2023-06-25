@@ -1,0 +1,1044 @@
+{
+	"info": {
+		"_postman_id": "dbde9da9-3581-4154-97b0-5da73797ba6a",
+		"name": "Dhafer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21643815"
+	},
+	"item": [
+		{
+			"name": "Advenced Function",
+			"item": [
+				{
+					"name": "Sorted product by Date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/sorted-by-createdat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"sorted-by-createdat"
+							]
+						},
+						"description": "Afficher les produits nouveaux vers anciens"
+					},
+					"response": []
+				},
+				{
+					"name": "Five last product added",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/recent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"recent"
+							]
+						},
+						"description": "Affiché les 5 derniers produits ajoutés"
+					},
+					"response": []
+				},
+				{
+					"name": "Filtre by category and price",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/filter/?categories=647cfe27c35444c21a5e670d&minPrice=0&maxPrice=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"filter",
+								""
+							],
+							"query": [
+								{
+									"key": "categories",
+									"value": "647cfe27c35444c21a5e670d"
+								},
+								{
+									"key": "minPrice",
+									"value": "0"
+								},
+								{
+									"key": "maxPrice",
+									"value": "100"
+								}
+							]
+						},
+						"description": "filtre multicritère par prix et par catégorie"
+					},
+					"response": []
+				},
+				{
+					"name": "Stats Product by month",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product/stats/month",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"stats",
+								"month"
+							]
+						},
+						"description": "Statistique des produits ajoutés par mois"
+					},
+					"response": []
+				},
+				{
+					"name": "Pareto of Ratings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pareto-ratings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pareto-ratings"
+							]
+						},
+						"description": "Pareto des rating par produit\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Stats by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/product/stats/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product",
+								"stats",
+								"category"
+							]
+						},
+						"description": "Statistique Nombre de produits par catégorie"
+					},
+					"response": []
+				},
+				{
+					"name": "exports product to excel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/export-to-excel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"export-to-excel"
+							]
+						},
+						"description": "Export product to excel"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Dhafer\",\r\n    \"password\":\"123456789\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				},
+				"description": "Signin"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titles\":\"Zipper\",\r\n    \"description\": \" is a popular type of fastening device used in clothing, bags, and various other products.\",\r\n    \"published\": true,\r\n    \"produits\":[\"64836d74040851a4aea682cf\",\"64836dd3040851a4aea682d1\",\"64836e2e040851a4aea682d3\",\"64836e98040851a4aea682d5\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category"
+					]
+				},
+				"description": "add category"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Category By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/647c9aaa16dca543015af5f6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"647c9aaa16dca543015af5f6"
+					]
+				},
+				"description": "filtre par categorie et affichage des produits"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titles\": \"Les Fermetures\",\r\n    \"description\": \"Plusieurs modéles pour les jeans et les vestes\",\r\n    \"published\": true,\r\n    \"produits\": [\r\n        \"647cfdb6c35444c21a5e670a\",\r\n        \"647cfe96c35444c21a5e6710\",\r\n        \"647cfe9fc35444c21a5e6712\",\r\n        \"647cfeadc35444c21a5e6714\",\r\n        \"647cfebfc35444c21a5e6716\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/category/647cfe27c35444c21a5e670d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"647cfe27c35444c21a5e670d"
+					]
+				},
+				"description": "update des produit dans catégorie"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/category/647b15264787caaaeb92d2ab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"category",
+						"647b15264787caaaeb92d2ab"
+					]
+				},
+				"description": "Delete category"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titles\":\"Puckering Resistant Zipper\",\r\n    \"description\": \"Puckering resistant zipper features tape-weaving technology that is designed to offset puckering of the zipper that can occur from shrinkage after garment sewing. Most garments & zipper sizes will see about 50% improvement in puckering level. \",\r\n    \"price\":25,\r\n    \"quantityStock\":4700,\r\n    \"published\": true,\r\n    \"images\":[],\r\n    \"categories\":\"\",\r\n    \"rating\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product"
+					]
+				},
+				"description": "add product x"
+			},
+			"response": [
+				{
+					"name": "Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titles\":\"Track Button\",\r\n    \"description\": \"The button is usually a functional part of a garment that, when passed through a buttonhole, allows the garment to be closed or opened easily\",\r\n    \"price\":250,\r\n    \"quantityStock\":5500,\r\n    \"published\": true,\r\n    \"images\":[],\r\n    \"categories\":\"\",\r\n    \"rating\": 55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titles\":\"Swivel Button\",\r\n    \"description\": \"The button is usually a functional part of a garment that, when passed through a buttonhole, allows the garment to be closed or opened easily. It can be finished in a wide range of plated metallic and oxidized finishes. Custom designs and personalized logo tops are available.\",\r\n    \"price\":50,\r\n    \"quantityStock\":5500,\r\n    \"published\": true,\r\n    \"images\":[],\r\n    \"categories\":\"\",\r\n    \"rating\": 55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titles\":\"Metal Body Button\",\r\n    \"description\": \"The button is usually a functional part of a garment that, when passed through a buttonhole, allows the garment to be closed or opened easily. It can be finished in a wide range of plated metallic and oxidized finishes. Custom designs and personalized logo tops are available.\",\r\n    \"price\":250,\r\n    \"quantityStock\":5500,\r\n    \"published\": true,\r\n    \"images\":[],\r\n    \"categories\":\"\",\r\n    \"rating\": 55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titles\":\"Two-prong Button\",\r\n    \"description\": \"Two-prong Buttons are secured by curling the prongs that come through the bottom of the body.\",\r\n    \"price\":250,\r\n    \"quantityStock\":5500,\r\n    \"published\": true,\r\n    \"images\":[],\r\n    \"categories\":\"\",\r\n    \"rating\": 55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titles\":\"EXCELLA®\",\r\n    \"description\": \"EXCELLA® is highest grade metal zipper with fully polished elements. The shiny beautiful look creates a luxury appearance to clothes or luggage.Items are available in a variety of surface colors including silver, gold, and antique finishes. There are two types of element shapes, a common single type and a luxury double type. \",\r\n    \"price\":35,\r\n    \"quantityStock\":7256,\r\n    \"published\": true,\r\n    \"images\":[],\r\n    \"categories\":[\"64836f94040851a4aea682d8\"],\r\n    \"rating\":25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/64836e2e040851a4aea682d3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"64836e2e040851a4aea682d3"
+					]
+				},
+				"description": "update product"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Picture to Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filename",
+							"value": "Waveless Tape Zipper_m.png",
+							"type": "text"
+						},
+						{
+							"key": "path",
+							"value": "\"C:\\Users\\21698\\Desktop\\Nouveau dossier\\Waveless Tape Zipper_m.png\"",
+							"type": "text"
+						},
+						{
+							"key": "contentType",
+							"value": "image",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "1024",
+							"type": "text"
+						},
+						{
+							"key": "published",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/64836e98040851a4aea682d5/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"64836e98040851a4aea682d5",
+						"images"
+					]
+				},
+				"description": "add picture to product"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Picture to Product Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filename\": \"EXCELLA_m.jpg\",\r\n\"path\": \"C:\\\\Users\\\\21698\\\\Desktop\\\\Nouveau dossier\\\\EXCELLA_m.jpg\",\r\n  \"contentType\": \"image/jpg\",\r\n  \"size\": 2048,\r\n  \"published\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/64836e2e040851a4aea682d3/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"64836e2e040851a4aea682d3",
+						"images"
+					]
+				},
+				"description": "add picture to product"
+			},
+			"response": []
+		},
+		{
+			"name": "Update picture for one Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"filename\": \"nouveau_nom_image.jpg\",\r\n  \"path\": \"chemin/vers/nouvelle_image.jpg\",\r\n  \"contentType\": \"image/jpeg\",\r\n  \"size\": 1024,\r\n  \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/647c63c88d7a82fc6c1c0ece/images/647c62aa8d7a82fc6c1c0ecb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"647c63c88d7a82fc6c1c0ece",
+						"images",
+						"647c62aa8d7a82fc6c1c0ecb"
+					]
+				},
+				"description": "Update picture for product"
+			},
+			"response": []
+		},
+		{
+			"name": "Search product by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/prod/647cfeadc35444c21a5e6714",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"prod",
+						"647cfeadc35444c21a5e6714"
+					]
+				},
+				"description": "Recommandation des produits de la même catégorie lors de l'affichage d'un produit\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/product/search/e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"search",
+						"e"
+					]
+				},
+				"description": "search producct"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/product/647cfe96c35444c21a5e6710",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product",
+						"647cfe96c35444c21a5e6710"
+					]
+				},
+				"description": "delete product"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Picture",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filename\": \"XXsX\",\r\n    \"path\": \"‪ssss\",\r\n    \"contentType\":\"image\",\r\n    \"size\": 350,\r\n    \"published\":true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"images"
+					]
+				},
+				"description": "add image"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Picture by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/images/64836ac4040851a4aea682c7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"images",
+						"64836ac4040851a4aea682c7"
+					]
+				},
+				"description": "Get image by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/confirm-user/648381b10e635b9240c51585",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"melek\",\r\n    \"password\":\"150\",\r\n    \"email\":\"melekbarhoumi69@gmail.com\",\r\n    \"roles\":[\"user\",\"admin\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/confirm-user/648381b10e635b9240c51585",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"confirm-user",
+						"648381b10e635b9240c51585"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload image to product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "titles",
+							"value": "\"Tests\"",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "SB_Metal Body_c_one star1.png",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "55",
+							"type": "text"
+						},
+						{
+							"key": "quantityStock",
+							"value": "1024",
+							"type": "text"
+						},
+						{
+							"key": "published",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "productId",
+							"value": "\"64836757040851a4aea682b2\"",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/21698/Pictures/2021-Volkswagen-Golf-GTI-003-1080.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/upload-image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload image to product Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/21698/Desktop/Nouveau dossier/SB_SWIVEL_m_new.png"
+						},
+						{
+							"key": "filename",
+							"value": "SB_Metal Body_c_one star.png",
+							"type": "text"
+						},
+						{
+							"key": "path",
+							"value": "\"C:\\Users\\21698\\Desktop\\Nouveau dossier\\SB_Metal Body_c_one star.png\"",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "1024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/64836633040851a4aea682ae/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"64836633040851a4aea682ae",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/signin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Dhafer\",\r\n    \"password\":\"123456789\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
