@@ -26,4 +26,6 @@ module.exports = function(app) {
  
    // Supprimer une catégorie
    app.delete("/api/category/:id", [authJwt.verifyToken], controller.deleteCategory);
+
+ 
 };

@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const cookieSession = require("cookie-session");
-
+const path = require("path");
 const dbConfig = require("./config/db.config");
 
 const app = express();
@@ -16,7 +16,8 @@ app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(express.json());
-app.use(express.static(__dirname + "../public"));
+app.use("/images", express.static(path.join(__dirname, "public/images")));
+
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 

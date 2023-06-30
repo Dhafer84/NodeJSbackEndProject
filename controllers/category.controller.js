@@ -39,17 +39,16 @@ exports.create = (req, res) => {
     });
 };
 // Retrieve all category
-exports.getAllCategorys = (req, res) => {
-  Category.find({}, '_id titles')
-  .populate('produits', 'titles')
-    .then(categorys => {
-      res.send(categorys);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message: err.message || "Some error occurred while retrieving categorys."
-      });
+exports.getAllCategorys = async (req, res) => {
+  try {
+    const categorys = await Category.find({}, '_id titles');
+    res.send(categorys);
+    
+  } catch (err) {
+    res.status(500).send({
+      message: err.message || "Some error occurred while retrieving categorys."
     });
+  }
 };
 // Retrieve a single Category by ID
 exports.getCategoryById = (req, res) => {

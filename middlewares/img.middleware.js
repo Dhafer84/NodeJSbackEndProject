@@ -27,7 +27,7 @@ const resizePhoto = async (req, res, next) => {
     req.file.filename = `image-${req.body.product_id}-${Date.now()}.jpeg`;
 
     await sharp(req.file.buffer)
-      //.resize(500, 500)
+      .resize(10, 10)
       .toFormat("jpeg")
       .jpeg({ quality: 90 })
       .toFile(`public/images/${req.file.filename}`);
